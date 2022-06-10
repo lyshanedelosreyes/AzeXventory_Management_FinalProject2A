@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>AzeXventory Management</title>
+
+		<script src="Storage.js"></script>
+		<link rel="stylesheet" href="css/aze.css">
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+		<link rel="icon" href="assets/logo.png">
+	</head>
+
+	<body onload="doShowAll()">
+
+		<h1>AzeXventory Management</h1>
+			<form name=AzeXventoryManagement>
+
+				<div id="main">
+					<table align="center">						
+						<tr>
+							<td><b>Item:</b><input type=text name=name></td>
+							<td><b>Quantity:</b><input type=text name=data></td>
+						</tr>
+
+						<tr>
+							<td>
+							    <input type=button value="Save"   onclick="SaveItem()"> 
+							    <input type=button value="Update" onclick="ModifyItem()"> 
+							    <input type=button value="Delete" onclick="RemoveItem()">
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div id="items_table">
+					<h3>STOCKS</h3>
+					<table id=list></table>
+					<p>
+						<label><input type=button value="Clear" onclick="ClearAll()">
+							<i>* Delete all items</i></label>
+					</p>
+				</div>
+			</form>
+
+	</body>
+</html>
